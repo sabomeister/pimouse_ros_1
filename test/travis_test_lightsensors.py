@@ -11,7 +11,7 @@ class LightsensorTest(unittest.TsetCase):
         rospy.Subscriber('/lightsensor', LightSensorValues, self.callback)
         self.values = LightSensorValues()
 
-    def callback(self.data):
+    def callback(self,data):
         self.count += 1
         self.values = data
 
